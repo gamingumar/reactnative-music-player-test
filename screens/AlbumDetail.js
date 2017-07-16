@@ -59,7 +59,7 @@ class AlbumDetail extends Component {
           <Ionicons name="md-play" size={42} color={'rgb(86,200,229)'} />
           <Ionicons name="md-skip-forward" size={42} color={'rgb(86,200,229)'} />
           <Ionicons name="md-thumbs-up" size={28} color={likeColor}>
-            <Text>{albumInfo.likes}</Text>
+            <Text style={styles.likesCounterStyle}>{albumInfo.likes}</Text>
           </Ionicons>
         </View>
       </View>
@@ -118,8 +118,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     marginTop: 30,
-    marginLeft: 40,
-    marginRight: 40,
+    marginLeft: 60,
+    marginRight: 0,
     marginBottom: 50
   },
   player: {
@@ -142,6 +142,9 @@ const styles = StyleSheet.create({
   },
   optionsColor: {
     color: 'rgb(86,200,229)'
+  },
+  likesCounterStyle: {
+    fontSize: 28
   }
 });
 
