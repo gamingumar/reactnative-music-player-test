@@ -14,7 +14,7 @@ export default function(state = INITIAL_STATE, action) {
         case FETCH_ALBUM_INFO_SUCCESS:
             return { ...state, loading: false, data: action.payload, success: true };
         case FETCH_ALBUM_INFO_FAIL:
-            return { ...state, loading: false, data: action.payload };
+            return { ...state, loading: false, data: action.payload, success: false };
         default:
             return state;
     }
