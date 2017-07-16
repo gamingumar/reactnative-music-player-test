@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "musicplayer-test",
-    "description": "Music App Test",
+    "description": "Music Player Test App Design, API implementation using redux saga",
     "slug": "musicplayer-test",
     "privacy": "public",
     "sdkVersion": "18.0.0",

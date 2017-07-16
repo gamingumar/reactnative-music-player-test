@@ -22,14 +22,14 @@ class AlbumDetail extends Component {
     
     let { albumInfo } = this.props;
 
-    let likeColor = albumInfo.is_liked ? 'green' : 'blue';
-
+    let likeColor = albumInfo.is_liked ? 'green' : 'grey';
+    
     return (
       <View style={styles.container}>
         <View>
           <View style={styles.headerStyle}>
             <Ionicons
-              name="ios-arrow-back"
+              name="md-arrow-back"
               style={styles.goBackStyle}
               size={32}
             />
@@ -55,10 +55,10 @@ class AlbumDetail extends Component {
           <Text style={styles.durationRight}>{albumInfo.duration}:00</Text>
         </View>
         <View style={styles.optionsView}>
-          <Ionicons name="md-skip-backward" size={32} />
-          <Ionicons name="md-play" size={32} color={'blue'} />
-          <Ionicons name="md-skip-forward" size={32} />
-          <Ionicons name="md-thumbs-up" size={32} color={likeColor}>
+          <Ionicons name="md-skip-backward" size={42} color={'rgb(86,200,229)'} />
+          <Ionicons name="md-play" size={42} color={'rgb(86,200,229)'} />
+          <Ionicons name="md-skip-forward" size={42} color={'rgb(86,200,229)'} />
+          <Ionicons name="md-thumbs-up" size={28} color={likeColor}>
             <Text>{albumInfo.likes}</Text>
           </Ionicons>
         </View>
@@ -73,20 +73,17 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     justifyContent: "space-between"
   },
-  navbar: {
-    backgroundColor: "brown",
-    flexDirection: "row",
-    height: 200
-  },
   headerStyle: {
-    backgroundColor: "brown",
+    backgroundColor: 'rgb(149,124,121)',
     flexDirection: "row",
-    height: 80,
+    height: 70,
     alignSelf: "stretch",
-    alignItems: "center"
+    alignItems: "center",
+    marginTop: 20
   },
   goBackStyle: {
-    left: 20
+    left: 20,
+    color: 'white'
   },
   headerTextStyle: {
     marginLeft: 10,
@@ -121,8 +118,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     marginTop: 30,
-    marginLeft: 20,
-    marginRight: 20,
+    marginLeft: 40,
+    marginRight: 40,
     marginBottom: 50
   },
   player: {
@@ -142,6 +139,9 @@ const styles = StyleSheet.create({
     alignItems: "flex-end",
     color: "grey",
     marginBottom: 10
+  },
+  optionsColor: {
+    color: 'rgb(86,200,229)'
   }
 });
 

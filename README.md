@@ -1,4 +1,8 @@
 # reactnative-music-player-test
-music player design in react native, redux and saga.
+music player app design and redux saga api call implementation in react native.
 
-#testing
+# Expo Link 
+https://exp.host/@gamingumar/musicplayer-test
+
+# testing
+npm install and run 
